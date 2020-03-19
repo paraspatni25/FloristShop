@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">FloristShop</string>
+    <string name="Welcome_message">Welcome to Our Flower Shop.</string>
+    <string name="hope_message">Hope you will like this.</string>
+    <string name="next_page">This will move image to next page</string>
+</resources>
