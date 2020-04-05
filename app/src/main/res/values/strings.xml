@@ -3,4 +3,23 @@
     <string name="Welcome_message">Welcome to Our Flower Shop.</string>
     <string name="hope_message">Hope you will like this.</string>
     <string name="next_page">This will move image to next page</string>
+    <string name="black_rose">BLACK ROSE</string>
+    <string name="red_rose">RED ROSE</string>
+    <string name="lily">LILY</string>
+    <string name="lily_content">Big image of lily flower in detail view</string>
+    <string name="description_lily">Lily is a genus of herbaceous flowering plants growing from bulbs, all with large prominent flowers. Lilies are a group of flowering plants which are important in culture and literature in much of the world. Most species are native to the temperate northern hemisphere, though their range extends into the northern subtropics. Many other plants have lilyin their common name but are not related to true lilies.</string>
+    <string name="description_red_rose">A rose is a woody perennial flowering plant of the genus Rosa, in the family Rosaceae, or the flower it bears. There are over three hundred species and thousands of cultivars. They form a group of plants that can be erect shrubs, climbing, or trailing, with stems that are often armed with sharp prickles.</string>
+    <string name="rose_content">Big image of Red rose flower in detail view</string>
+    <string name="black_rose_content">Big image of Black rose flower in detail view</string>
+    <string name="count_initial_value">0</string>
+    <string name="quantity">Quantity</string>
+    <string name="price_lily">$15</string>
+    <string name="price_red_rose">$11</string>
+    <string name="price_black_rose">$10</string>
+    <string name="total_label">TOTAL</string>
+    <string name="initial_value">0</string>
+    <string name="final_amount_label">Final Amount</string>
+    <string name="q_s_t_label">Q.S.T</string>
+    <string name="g_s_t_label">G.S.T</string>
+    <string name="dollar_sign">$</string>
 </resources>
