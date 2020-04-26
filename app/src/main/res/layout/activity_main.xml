@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
     tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/textView_Welcome"
+        android:layout_marginTop="400dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
         android:text="@string/Welcome_message"
         android:textColor="#000000"
-        android:textSize="18sp" />
+        android:textSize="20sp" />
 
     <TextView
         android:id="@+id/textView_hope_message"
@@ -25,15 +25,18 @@
         android:layout_height="wrap_content"
         android:text="@string/hope_message"
         android:textColor="#000000"
-        android:textSize="18sp" />
+        android:textSize="20sp" />
 
-    <ImageView
-        android:id="@+id/imageView_next_page"
-        android:layout_width="75dp"
-        android:layout_height="50dp"
-        android:contentDescription="@string/next_page"
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_welcome_screen"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:layout_margin="20dp"
-        app:srcCompat="@drawable/ic_arrow_forward_black_24dp" />
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="#6200EE"
+        android:src="@drawable/ic_arrow_forward"
+        android:contentDescription="@string/next_page" />
+
 </RelativeLayout>

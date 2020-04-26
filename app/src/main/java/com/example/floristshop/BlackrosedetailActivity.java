@@ -1,10 +1,11 @@
 package com.example.floristshop;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class BlackrosedetailActivity extends AppCompatActivity {
@@ -22,7 +23,7 @@ public class BlackrosedetailActivity extends AppCompatActivity {
         Add_to_cart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(BlackrosedetailActivity.this, CheckoutActivity.class);
+                Intent i = new Intent(BlackrosedetailActivity.this, Shipping_Detail_Activity.class);
                 startActivity(i);
 
             }

@@ -1,10 +1,12 @@
 package com.example.floristshop;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
+
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class ItemsActivity extends AppCompatActivity {
@@ -55,7 +57,7 @@ public class ItemsActivity extends AppCompatActivity {
         Checkout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(ItemsActivity.this,CheckoutActivity.class);
+                Intent i = new Intent(ItemsActivity.this, Shipping_Detail_Activity.class);
                 startActivity(i);
             }
         });

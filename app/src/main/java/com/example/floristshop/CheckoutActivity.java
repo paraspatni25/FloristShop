@@ -1,12 +1,15 @@
 package com.example.floristshop;
 
-import androidx.appcompat.app.AppCompatActivity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
+import androidx.appcompat.app.AppCompatActivity;
+
 
 public class CheckoutActivity extends AppCompatActivity {
 
@@ -34,8 +37,11 @@ public class CheckoutActivity extends AppCompatActivity {
     int lily_price = 15, red_price = 11, black_price = 10;
     double gst = 0, qst = 0,final_amount = 0;
     public static int count, lilyCount, blackRose, redRose = 0;
+
     //Creating floating button
-    private FloatingActionButton Checkout;
+    Button Checkout;
+
+
 
 
     @Override
@@ -61,12 +67,17 @@ public class CheckoutActivity extends AppCompatActivity {
         QST = findViewById(R.id.textView_qst_value);
         Final_amount = findViewById(R.id.textView_final_amount_value);
 
+
         //creating the toast in the end to show the end message.
-        Checkout= findViewById(R.id.fab_checkout);
+        Checkout = findViewById(R.id.button_place_order);
         Checkout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getApplicationContext(),"You have Successfully purchased items.",Toast.LENGTH_LONG).show();
+                Intent i = new Intent(CheckoutActivity.this, ConfirmationActivity.class);
+                String total = Final_amount.getText().toString();
+                i.putExtra("total", total);
+                startActivity(i);
             }
         });
 
@@ -138,10 +149,12 @@ public class CheckoutActivity extends AppCompatActivity {
                 Settotalcount();
             }
         });
+
+
     }
     //Creating the total method for all the calculation of before and after taxes.
     void Settotalcount(){
-        Total_Count.setText(getString(R.string.dollar_sign)+Integer.toString(total_amount));
+        Total_Count.setText(getString(R.string.dollar_sign) + total_amount);
         gst = total_amount*0.05;
         qst = total_amount*0.09;
         final_amount = total_amount+ qst + gst;

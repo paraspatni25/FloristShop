@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".CheckoutActivity"></activity>
+        <activity android:name=".ConfirmationActivity"></activity>
+        <activity android:name=".Shipping_Detail_Activity" />
+        <activity android:name=".CheckoutActivity" />
         <activity android:name=".BlackrosedetailActivity" />
         <activity android:name=".RedrosedetailActivity" />
         <activity android:name=".LilydetailActivity" />

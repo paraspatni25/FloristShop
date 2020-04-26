@@ -1,351 +1,581 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
     tools:context=".CheckoutActivity">
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/image_lily"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="270dp"
-        android:layout_marginBottom="548dp"
-        android:src="@drawable/lily_flower"
-        app:civ_border_color="#FFFFFF"
-        app:civ_border_width="1dp" />
+        <TextView
+            android:id="@+id/text_title_confirm_order"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_vertical"
+            android:text="@string/confirm_order_label"
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/textView_lily"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="-250dp"
-        android:layout_marginBottom="600dp"
-        android:layout_toEndOf="@+id/image_lily"
-        android:text="@string/lily"
-        android:textColor="#000000"
-        android:textSize="18sp"
-        android:textStyle="italic" />
+    </RelativeLayout>
 
-    <TextView
-        android:id="@+id/textView_quantity_lily"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="37dp"
-        android:layout_marginBottom="628dp"
-        android:text="@string/quantity" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <ImageView
-        android:id="@+id/imageView_decrease_lily"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="80dp"
-        android:layout_marginBottom="600dp"
-        app:srcCompat="@drawable/ic_remove_circle_black_24dp" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/show_quantity_lily"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="60dp"
-        android:layout_marginBottom="600dp"
-        android:text="@string/count_initial_value"
-        android:textColor="#000000"
-        android:textSize="18sp" />
+            <TextView
+                android:id="@+id/textView_title_order"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:text="@string/your_order_label"
+                android:textAlignment="center"
+                android:textColor="#ffffff"
+                android:textSize="16sp"
+                android:textStyle="bold" />
 
-    <ImageView
-        android:id="@+id/imageView_increase_lily"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="25dp"
-        android:layout_marginBottom="600dp"
-        app:srcCompat="@drawable/ic_add_circle_black_24dp" />
+            <LinearLayout
+                android:id="@+id/layout_lily"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView_title_order"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="11dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginBottom="11dp"
+                android:baselineAligned="false"
+                android:orientation="horizontal"
+                android:weightSum="2">
 
-    <TextView
-        android:id="@+id/textView_price_lily"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="219dp"
-        android:layout_marginBottom="566dp"
-        android:text="@string/price_lily" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10sp"
+                    android:layout_weight="1"
+                    android:gravity="center|start"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/image_red_rose"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="270dp"
-        android:layout_marginBottom="420dp"
-        android:src="@drawable/red_rose_flower"
-        app:civ_border_color="#FFFFFF"
-        app:civ_border_width="1dp" />
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/image_lily"
+                        android:layout_width="75dp"
+                        android:layout_height="75dp"
+                        android:gravity="center|start"
+                        android:src="@drawable/lily_flower"
+                        app:civ_border_color="#FFFFFF"
+                        app:civ_border_width="1dp" />
 
-    <TextView
-        android:id="@+id/textView_red_rose"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="-250dp"
-        android:layout_marginBottom="458dp"
-        android:layout_toEndOf="@+id/image_red_rose"
-        android:text="@string/red_rose"
-        android:textColor="#000000"
-        android:textSize="18sp"
-        android:textStyle="italic" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:orientation="vertical"
+                        android:weightSum="2">
 
-    <TextView
-        android:id="@+id/textView_quantity_red"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="37dp"
-        android:layout_marginBottom="492dp"
-        android:text="@string/quantity" />
+                        <TextView
+                            android:id="@+id/textView_lily"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="end"
+                            android:text="@string/lily"
+                            android:textColor="#000000"
+                            android:textSize="18sp"
+                            android:textStyle="italic" />
 
-    <ImageView
-        android:id="@+id/imageView_decrease_red_rose"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="80dp"
-        android:layout_marginBottom="460dp"
-        app:srcCompat="@drawable/ic_remove_circle_black_24dp" />
+                        <TextView
+                            android:id="@+id/textView_price_lily"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/price_lily"
+                            android:textSize="16sp" />
 
-    <TextView
-        android:id="@+id/show_quantity_red_rose"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="60dp"
-        android:layout_marginBottom="460dp"
-        android:text="@string/count_initial_value"
-        android:textColor="#000000"
-        android:textSize="18sp" />
+                    </LinearLayout>
 
-    <ImageView
-        android:id="@+id/imageView_increase_red_rose"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="25dp"
-        android:layout_marginBottom="460dp"
-        app:srcCompat="@drawable/ic_add_circle_black_24dp" />
+                </LinearLayout>
 
-    <TextView
-        android:id="@+id/textView_price_red"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="214dp"
-        android:layout_marginBottom="416dp"
-        android:text="@string/price_red_rose" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:weightSum="2">
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/image_black_rose"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="270dp"
-        android:layout_marginBottom="285dp"
-        android:src="@drawable/black_rose_flower"
-        app:civ_border_color="#FFFFFF"
-        app:civ_border_width="1dp" />
+                    <TextView
+                        android:id="@+id/textView_quantity_lily"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/quantity"
+                        android:textSize="16sp" />
 
-    <TextView
-        android:id="@+id/textView_black_rose"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="-250dp"
-        android:layout_marginBottom="321dp"
-        android:layout_toEndOf="@+id/image_black_rose"
-        android:text="@string/black_rose"
-        android:textColor="#000000"
-        android:textSize="18sp"
-        android:textStyle="italic" />
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="3">
 
-    <TextView
-        android:id="@+id/textView_quantity_black"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="38dp"
-        android:layout_marginBottom="355dp"
-        android:text="@string/quantity" />
+                        <ImageView
+                            android:id="@+id/imageView_decrease_lily"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10sp"
+                            android:layout_weight="1"
+                            android:contentDescription="@string/decrement_label"
+                            app:srcCompat="@drawable/ic_remove_circle_black_24dp" />
 
-    <ImageView
-        android:id="@+id/imageView_decrease_black_rose"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="80dp"
-        android:layout_marginBottom="321dp"
-        app:srcCompat="@drawable/ic_remove_circle_black_24dp" />
+                        <TextView
+                            android:id="@+id/show_quantity_lily"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10sp"
+                            android:layout_weight="1"
+                            android:text="@string/count_initial_value"
+                            android:textColor="#000000"
+                            android:textSize="16sp" />
 
-    <TextView
-        android:id="@+id/show_quantity_black_rose"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="60dp"
-        android:layout_marginBottom="322dp"
-        android:text="@string/count_initial_value"
-        android:textColor="#000000"
-        android:textSize="18sp" />
+                        <ImageView
+                            android:id="@+id/imageView_increase_lily"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10sp"
+                            android:layout_weight="1"
+                            android:contentDescription="@string/increment_label"
+                            app:srcCompat="@drawable/ic_add_circle_black_24dp" />
 
-    <ImageView
-        android:id="@+id/imageView_increase_black_rose"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="25dp"
-        android:layout_marginBottom="321dp"
-        app:srcCompat="@drawable/ic_add_circle_black_24dp" />
+                    </LinearLayout>
 
-    <TextView
-        android:id="@+id/textView_price_black"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="223dp"
-        android:layout_marginBottom="289dp"
-        android:text="@string/price_black_rose" />
+                </LinearLayout>
 
-    <TextView
-        android:id="@+id/textView_total_count_label"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="43dp"
-        android:layout_marginBottom="192dp"
-        android:textColor="#000000"
-        android:text="@string/total_label"
-        android:textSize="18sp" />
+            </LinearLayout>
 
-    <TextView
-        android:id="@+id/textView_total_count"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:text="@string/initial_value"
-        android:layout_alignParentBottom="true"
-        android:textSize="18sp"
-        android:layout_marginEnd="105dp"
-        android:textColor="#000000"
-        android:layout_marginBottom="192dp" />
+            <View
+                android:id="@+id/line_separator_lily_red"
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/layout_lily"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:background="#CCC7D3" />
 
-    <TextView
-        android:id="@+id/textView_gst"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="43dp"
-        android:layout_marginBottom="149dp"
-        android:textColor="#000000"
-        android:text="@string/g_s_t_label"
-        android:textSize="18sp" />
-    <TextView
-        android:id="@+id/textView_gst_value"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:textSize="18sp"
-        android:layout_marginEnd="105dp"
-        android:textColor="#000000"
-        android:layout_marginBottom="146dp"
-        android:text="@string/initial_value" />
+            <LinearLayout
+                android:id="@+id/layout_red_rose"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line_separator_lily_red"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="11dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginBottom="11dp"
+                android:baselineAligned="false"
+                android:orientation="horizontal"
+                android:weightSum="2">
 
-    <TextView
-        android:id="@+id/textView_qst"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
-        android:textSize="18sp"
-        android:layout_marginStart="43dp"
-        android:textColor="#000000"
-        android:layout_marginBottom="109dp"
-        android:text="@string/q_s_t_label" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10sp"
+                    android:layout_weight="1"
+                    android:gravity="center|start"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
 
-    <TextView
-        android:id="@+id/textView_qst_value"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:textSize="18sp"
-        android:layout_marginEnd="105dp"
-        android:layout_marginBottom="107dp"
-        android:textColor="#000000"
-        android:text="@string/initial_value" />
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/image_red_rose"
+                        android:layout_width="75dp"
+                        android:layout_height="75dp"
+                        android:gravity="center|start"
+                        android:src="@drawable/red_rose_flower"
+                        app:civ_border_color="#FFFFFF"
+                        app:civ_border_width="1dp" />
 
-    <TextView
-        android:id="@+id/textView_final_amount"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
-        android:textSize="18sp"
-        android:layout_marginStart="43dp"
-        android:layout_marginBottom="51dp"
-        android:textColor="#000000"
-        android:text="@string/final_amount_label" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:orientation="vertical"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:id="@+id/textView_red_rose"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/red_rose"
+                            android:textColor="#000000"
+                            android:textSize="16sp"
+                            android:textStyle="italic" />
+
+                        <TextView
+                            android:id="@+id/textView_price_red"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/price_red_rose"
+                            android:textSize="16sp" />
+
+                    </LinearLayout>
 
 
-    <TextView
-        android:id="@+id/textView_final_amount_value"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="105dp"
-        android:layout_marginBottom="56dp"
-        android:text="@string/initial_value"
-        android:textColor="#000000"
-        android:textSize="18sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/textView_quantity_red"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/quantity"
+                        android:textSize="16sp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="3">
+
+                        <ImageView
+                            android:id="@+id/imageView_decrease_red_rose"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10sp"
+                            android:layout_weight="1"
+                            android:contentDescription="@string/decrement_label"
+                            app:srcCompat="@drawable/ic_remove_circle_black_24dp" />
+
+                        <TextView
+                            android:id="@+id/show_quantity_red_rose"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10sp"
+                            android:layout_weight="1"
+                            android:text="@string/count_initial_value"
+                            android:textColor="#000000"
+                            android:textSize="16sp" />
+
+                        <ImageView
+                            android:id="@+id/imageView_increase_red_rose"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10sp"
+                            android:layout_weight="1"
+                            android:contentDescription="@string/increment_label"
+                            app:srcCompat="@drawable/ic_add_circle_black_24dp" />
 
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab_checkout"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:src="@drawable/ic_check_circle_black_60dp"
-        android:backgroundTint="@color/colorAccent"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginBottom="40dp"
-        android:layout_marginEnd="20dp"
-        app:fabSize="normal"/>
-</RelativeLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/line_separator_red_black"
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/layout_red_rose"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:background="#CCC7D3" />
+
+            <LinearLayout
+                android:id="@+id/layout_black_rose"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line_separator_red_black"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="11dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginBottom="11dp"
+                android:baselineAligned="false"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10sp"
+                    android:layout_weight="1"
+                    android:gravity="center|start"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/image_black_rose"
+                        android:layout_width="75dp"
+                        android:layout_height="75dp"
+                        android:gravity="center|start"
+                        android:src="@drawable/black_rose_flower"
+                        app:civ_border_color="#FFFFFF"
+                        app:civ_border_width="0dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:orientation="vertical"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:id="@+id/textView_black_rose"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/black_rose"
+                            android:textColor="#000000"
+                            android:textSize="16sp"
+                            android:textStyle="italic" />
+
+                        <TextView
+                            android:id="@+id/textView_price_black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/price_black_rose"
+                            android:textSize="16sp" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/textView_quantity_black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/quantity"
+                        android:textSize="16sp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="3">
+
+                        <ImageView
+                            android:id="@+id/imageView_decrease_black_rose"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10sp"
+                            android:layout_weight="1"
+                            android:contentDescription="@string/decrement_label"
+                            app:srcCompat="@drawable/ic_remove_circle_black_24dp" />
+
+                        <TextView
+                            android:id="@+id/show_quantity_black_rose"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10sp"
+                            android:layout_weight="1"
+                            android:text="@string/count_initial_value"
+                            android:textColor="#000000"
+                            android:textSize="16sp" />
+
+                        <ImageView
+                            android:id="@+id/imageView_increase_black_rose"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10sp"
+                            android:layout_weight="1"
+                            android:contentDescription="@string/increment_label"
+                            app:srcCompat="@drawable/ic_add_circle_black_24dp" />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/line_separator_black_total"
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/layout_black_rose"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:background="#CCC7D3" />
+
+            <LinearLayout
+                android:id="@+id/layout_untaxed_total"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line_separator_black_total"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="11dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginBottom="11dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/textView_total_count_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/total_label"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textView_total_count"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:text="@string/initial_value"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_gst_tax"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layout_untaxed_total"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="11dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginBottom="11dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/textView_gst"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/g_s_t_label"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textView_gst_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:text="@string/initial_value"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_qst_tax"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layout_gst_tax"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="11dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginBottom="11dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/textView_qst"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/q_s_t_label"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textView_qst_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:text="@string/initial_value"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/line_separator_q_s_t_final_amount"
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/layout_qst_tax"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:background="#CCC7D3" />
+
+            <LinearLayout
+                android:id="@+id/layout_total_amount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layout_qst_tax"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="11dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginBottom="11dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/textView_final_amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/final_amount_label"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+                <TextView
+
+                    android:id="@+id/textView_final_amount_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:text="@string/initial_value"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/button_place_order"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layout_total_amount"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="11dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/round_button"
+                android:text="@string/place_order_button_label"
+                android:textColor="#ffffff"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</LinearLayout>

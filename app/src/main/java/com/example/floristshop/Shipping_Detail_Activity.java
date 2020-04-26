@@ -3,26 +3,25 @@ package com.example.floristshop;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
+public class Shipping_Detail_Activity extends AppCompatActivity {
 
-public class MainActivity extends AppCompatActivity {
-
-    FloatingActionButton Next_page;
+    Button Change_activity;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_shipping__detail_);
 
         //Creating an on click listener on main activity to move to next activity.
-        Next_page = findViewById(R.id.fab_welcome_screen);
-        Next_page.setOnClickListener(new View.OnClickListener() {
+        Change_activity = findViewById(R.id.button_checkout);
+        Change_activity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(MainActivity.this, ItemsActivity.class);
+                Intent i = new Intent(Shipping_Detail_Activity.this, CheckoutActivity.class);
                 startActivity(i);
             }
         });
